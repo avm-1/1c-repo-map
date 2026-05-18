@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 1C конфигурации (если случайно положили внутрь)
+*.cf
+*.cfe
+*.epf
+*.erf
+1Cv8.1CD
+1Cv8.cfl
+1Cv8Intrc.tfl
+
+# Логи
+*.log
+generate_log*.txt
+test_log.txt
+
+# Результаты тестов (большие)
+repo_map/
+!examples/repo_map/

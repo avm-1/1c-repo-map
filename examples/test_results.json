@@ -1,0 +1,156 @@
+{
+  "total_naive_tokens": 1331549,
+  "total_repo_tokens": 259390,
+  "total_saving_tokens": 1072159,
+  "total_saving_percent": 80.52,
+  "scenarios": [
+    {
+      "scenario": {
+        "id": 1,
+        "name": "Документ Направление — не заполняется номенклатура в назначенных услугах",
+        "description": "В документе Направление при заполнении табличной части НазначенныеУслуги не подставляется НоменклатураМедицинскихУслуг из регистра CDAДокументыНазначенныхУслуг. Нужно найти документ, его модуль объекта, связанные регистры и общие модули.",
+        "keywords": [
+          "Направление",
+          "НазначенныеУслуги",
+          "CDAДокументыНазначенныхУслуг",
+          "модуль"
+        ],
+        "target_objects": [
+          "Documents/Направление",
+          "InformationRegisters/CDAДокументыНазначенныхУслуг"
+        ]
+      },
+      "naive": {
+        "files_read": 60,
+        "chars": 540213,
+        "tokens": 281638
+      },
+      "repo_map": {
+        "maps_read": 4,
+        "files_read": 6,
+        "chars": 136052,
+        "tokens": 65746
+      },
+      "saving_tokens": 215892,
+      "saving_percent": 76.66
+    },
+    {
+      "scenario": {
+        "id": 2,
+        "name": "Справочник Сотрудники — добавить реквизит для хранения идентификатора ФРМР",
+        "description": "В справочнике Сотрудники нужно добавить реквизит ИдентификаторФРМР с типом Строка и разместить на форме элемента после поля КодПоОМС. Требуется найти справочник, его форму, модули, связанные общие модули.",
+        "keywords": [
+          "Сотрудники",
+          "ИдентификаторФРМР",
+          "ФРМР",
+          "форма"
+        ],
+        "target_objects": [
+          "Catalogs/Сотрудники"
+        ]
+      },
+      "naive": {
+        "files_read": 60,
+        "chars": 311321,
+        "tokens": 157565
+      },
+      "repo_map": {
+        "maps_read": 4,
+        "files_read": 6,
+        "chars": 93311,
+        "tokens": 43671
+      },
+      "saving_tokens": 113894,
+      "saving_percent": 72.28
+    },
+    {
+      "scenario": {
+        "id": 3,
+        "name": "DICOMWorkList — не подставляется ScheduledProcedureStepID при формировании Worklist",
+        "description": "В модуле DICOMWorkList при формировании Worklist для аппарата МРТ не подставляется ScheduledProcedureStepID из регистра DicomWorkList. Требуется найти общие модули DICOM, регистр DicomWorkList, связанные обработки.",
+        "keywords": [
+          "DICOMWorkList",
+          "DicomWorkList",
+          "ScheduledProcedureStepID",
+          "модуль"
+        ],
+        "target_objects": [
+          "CommonModules/DICOMWorkList",
+          "InformationRegisters/DicomWorkList"
+        ]
+      },
+      "naive": {
+        "files_read": 34,
+        "chars": 386815,
+        "tokens": 165132
+      },
+      "repo_map": {
+        "maps_read": 4,
+        "files_read": 6,
+        "chars": 87013,
+        "tokens": 39836
+      },
+      "saving_tokens": 125296,
+      "saving_percent": 75.88
+    },
+    {
+      "scenario": {
+        "id": 4,
+        "name": "Документ ВыпискаИзСтационара — не формируется CDA при проведении",
+        "description": "В документе ВыпискаИзСтационара при проведении не формируется запись в регистре CDAДокументыМедицинскогоДокумента. Нужно найти документ, его модуль объекта, регистр и связанные модули формирования CDA.",
+        "keywords": [
+          "ВыпискаИзСтационара",
+          "CDA",
+          "CDAДокументыМедицинскогоДокумента",
+          "модуль"
+        ],
+        "target_objects": [
+          "Documents/ВыпискаИзСтационара",
+          "InformationRegisters/CDAДокументыМедицинскогоДокумента"
+        ]
+      },
+      "naive": {
+        "files_read": 60,
+        "chars": 517388,
+        "tokens": 246057
+      },
+      "repo_map": {
+        "maps_read": 4,
+        "files_read": 6,
+        "chars": 156609,
+        "tokens": 76432
+      },
+      "saving_tokens": 169625,
+      "saving_percent": 68.94
+    },
+    {
+      "scenario": {
+        "id": 5,
+        "name": "HL7 — при получении сообщения ADT^A08 не обновляются данные пациента",
+        "description": "При получении HL7-сообщения типа ADT^A08 не обновляются данные пациента в справочнике Пациенты. Требуется найти обработки HL7, общие модули HL7, подписки на события и связанные HTTP-сервисы.",
+        "keywords": [
+          "HL7",
+          "ADT^A08",
+          "Пациенты",
+          "обработка"
+        ],
+        "target_objects": [
+          "CommonModules/HL7ПодпискиНаСобытия"
+        ]
+      },
+      "naive": {
+        "files_read": 60,
+        "chars": 1017835,
+        "tokens": 481157
+      },
+      "repo_map": {
+        "maps_read": 4,
+        "files_read": 1,
+        "chars": 74830,
+        "tokens": 33705
+      },
+      "saving_tokens": 447452,
+      "saving_percent": 93.0
+    }
+  ]
+}
